@@ -11,6 +11,7 @@ public class bodyMovement : MonoBehaviour
     Mesh mesh;
     Vector3[] vertices;
     GameObject[] particles;
+    Transform childObj;
 
     void AddSpring(int i0, int i1)
     {
@@ -24,7 +25,9 @@ public class bodyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mesh = GetComponentInChildren<MeshFilter>().mesh;
+        MeshFilter filter = GetComponentInChildren<MeshFilter>();
+        mesh = filter.mesh;
+        childObj = filter.transform;
         vertices = mesh.vertices;
         particles = new GameObject[vertices.Length];
 
@@ -33,7 +36,7 @@ public class bodyMovement : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-            Vector3 pos = transform.TransformPoint(vertices[i]);
+            Vector3 pos = childObj.TransformPoint(transform.TransformPoint(vertices[i]));
             GameObject go = Instantiate(particle, pos, Quaternion.identity);
             particles[i] = go;
         }
@@ -87,7 +90,7 @@ public class bodyMovement : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-            Vector3 pos = particles[i].transform.position;
+            Vector3 pos = childObj.InverseTransformPoint(particles[i].transform.position);
             vertices[i] = pos;
         }
 
