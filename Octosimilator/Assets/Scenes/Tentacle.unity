@@ -386,6 +386,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -86.18, z: 0}
+--- !u!1001 &2337076859801672575
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4646211505775380351, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_Name
+      value: TentacleObj_65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512350198050452844, guid: fd5e7f918e8787945adfa989de94764b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd5e7f918e8787945adfa989de94764b, type: 3}
 --- !u!1 &2455714020533832874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 375234055403705902, guid: d002d200d2a4417449fa2b31b59d251b,
@@ -508,6 +577,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle_65
       objectReference: {fileID: 0}
+    - target: {fileID: 6144982481645467124, guid: 934ccc0c16eea24429ba6a73c4600df2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7141588446118610919, guid: 934ccc0c16eea24429ba6a73c4600df2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,3 +639,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934ccc0c16eea24429ba6a73c4600df2, type: 3}
+--- !u!1 &6923263783809883136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4646211505775380351, guid: fd5e7f918e8787945adfa989de94764b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2337076859801672575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6923263783809883137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923263783809883136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfac6dce53500c419b0c0fdd62ad3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 991576278044615764, guid: ac6dad1a57305a942becd57b3940763c, type: 3}
+  thresh: 1
+  input_force: 1
