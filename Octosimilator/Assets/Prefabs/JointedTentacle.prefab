@@ -113,24 +113,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -87.58851
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 87.11576
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 87.220055
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 110.148285
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -207,24 +207,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -75.266426
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 72.494736
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 76.663445
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 90.56566
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -296,29 +296,29 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: -0.57}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0.54000044}
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0.5400002}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -76.12176
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 73.650154
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 74.79484
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 92.9859
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -395,24 +395,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -71.96654
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 62.053963
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 73.74427
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 95.998
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -489,24 +489,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -75.469925
+    limit: -117.56365
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 177
+    limit: 118.761375
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 113.85653
+    limit: 108.30989
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 177
+    limit: 126.87913
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -856,24 +856,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -127.541336
+    limit: -113.419624
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 142.58423
+    limit: 113.87012
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 127.9746
+    limit: 108.7208
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 177
+    limit: 128.23482
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -1522,24 +1522,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -95.16149
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 95.232155
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 109.611015
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 113.402824
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -1616,24 +1616,24 @@ CharacterJoint:
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_LowTwistLimit:
-    limit: -20
+    limit: -83.70754
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 81.67415
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
-    damper: 0
+    damper: 1
   m_Swing1Limit:
-    limit: 40
+    limit: 84.576614
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 40
+    limit: 101.94436
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
