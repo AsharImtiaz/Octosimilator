@@ -14,7 +14,7 @@ public class TentacleNavigation : MonoBehaviour
     //Rigidbody connectedbodykinematicOption;
     //public GameObject connectedBody;
     public float ForceStrength = 20.0f;
-    public float TorqueStrength = 20.0f;
+    //public float TorqueStrength = 20.0f;
     void Start()
     {
         //parent = transform.parent;
@@ -28,32 +28,40 @@ public class TentacleNavigation : MonoBehaviour
     void Update()
     {
         Vector3 direction = new Vector3();
-        Vector3 torque = new Vector3();
+        //Vector3 torque = new Vector3();
         if(Input.GetKey(KeyCode.Q))
         {
             direction += Vector3.up;
-            torque += transform.TransformDirection(Vector3.left).normalized;
+            //torque += transform.TransformDirection(Vector3.left).normalized;
         }
         if (Input.GetKey(KeyCode.E))
         {
             direction += Vector3.down;
-            torque += transform.TransformDirection(Vector3.right).normalized;
+            //torque += transform.TransformDirection(Vector3.right).normalized;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            direction += transform.TransformDirection(Vector3.forward).normalized;
+            Vector3 cameraDirection = Camera.main.transform.forward;
+            cameraDirection.y = 0;
+            direction += cameraDirection.normalized;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            direction += transform.TransformDirection(Vector3.back).normalized;
+            Vector3 cameraDirection = -Camera.main.transform.forward;
+            cameraDirection.y = 0;
+            direction += cameraDirection.normalized;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            direction += transform.TransformDirection(Vector3.right).normalized;
+            Vector3 cameraDirection = Camera.main.transform.right;
+            cameraDirection.y = 0;
+            direction += cameraDirection.normalized;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction += transform.TransformDirection(Vector3.left).normalized;
+            Vector3 cameraDirection = -Camera.main.transform.right;
+            cameraDirection.y = 0;
+            direction += cameraDirection.normalized;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -61,10 +69,10 @@ public class TentacleNavigation : MonoBehaviour
             rbTip.isKinematic = !rbTip.isKinematic;
         }
 
-        MoveTentacle(direction, torque);
+        MoveTentacle(direction);
     }
 
-    void MoveTentacle(Vector3 direction, Vector3 torque)
+    void MoveTentacle(Vector3 direction)
     {
         //Debug.Log("Rising");
         //kinematicOption.isKinematic = true;
