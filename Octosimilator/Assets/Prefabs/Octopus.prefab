@@ -4247,6 +4247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5768871714733959736}
+  - component: {fileID: 8817043154496503320}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
@@ -4261,7 +4262,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056106573540330646}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4273,6 +4274,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8817043154496503320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056106573540330646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e626c21ba87934c87343e6d40b83b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tentacleNavigations:
+  - {fileID: 7371368624312083676}
+  - {fileID: 7371368624503435470}
+  - {fileID: 7371368622873015810}
+  - {fileID: 6737773990220930085}
 --- !u!1 &8709654097644328609
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,7 +4541,6 @@ MonoBehaviour:
   Tip: {fileID: 8709654099196502231}
   Arm: {fileID: 9219866012587213893}
   ForceStrength: 16
-  TorqueStrength: 5
 --- !u!1 &8709654098864293619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,7 +4849,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: -0.43}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0.15200043}
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0.15199947}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -5968,7 +5985,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: -0.43}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.1368684e-13, y: 0, z: 0.15200138}
+  m_ConnectedAnchor: {x: -0.0000009834766, y: 0, z: 0.15200138}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -6209,7 +6226,6 @@ MonoBehaviour:
   Tip: {fileID: 8829248829660058035}
   Arm: {fileID: 9055234770455196961}
   ForceStrength: 16
-  TorqueStrength: 5
 --- !u!1 &8829248828707797129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6460,7 +6476,6 @@ MonoBehaviour:
   Tip: {fileID: 8829248829628204628}
   Arm: {fileID: 9055234770481537734}
   ForceStrength: 16
-  TorqueStrength: 5
 --- !u!1 &8829248828762808432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7699,7 +7714,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: -0.43}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0.15200043}
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0.15199947}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -7998,7 +8013,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: -0.43}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.1368684e-13, y: 0, z: 0.15200138}
+  m_ConnectedAnchor: {x: 0.0000009834766, y: 0, z: 0.15200138}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -8146,7 +8161,6 @@ MonoBehaviour:
   Tip: {fileID: 8829248828642355144}
   Arm: {fileID: 9055234771199083354}
   ForceStrength: 16
-  TorqueStrength: 5
 --- !u!1 &8829248829702166805
 GameObject:
   m_ObjectHideFlags: 0
