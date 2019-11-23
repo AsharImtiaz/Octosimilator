@@ -23,7 +23,7 @@ public class tipClamp : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.LeftAlt) && grabThing != null)
         {
-            releaseObject();
+            //releaseObject();
         }
     }
 
@@ -37,7 +37,7 @@ public class tipClamp : MonoBehaviour
         if(collision.gameObject.tag == "Grab")
         {
             grabThing = collision.gameObject;
-            grabObject(grabThing);            
+            //grabObject(grabThing);            
         }
     }
 

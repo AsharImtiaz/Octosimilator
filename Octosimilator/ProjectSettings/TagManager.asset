@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Climb
   - Grab
+  - Tip
   layers:
   - Default
   - TransparentFX
