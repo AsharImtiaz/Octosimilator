@@ -9,10 +9,12 @@ public class pickandThrow : MonoBehaviour
     GameObject parentTemp;
     Vector3 objPosition;
     Vector3 throwForce;
+    bool buttonCheck;
     void Start()
     {
         isPicked = false;
         throwForce = Vector3.zero;
+        buttonCheck = false;
     }
 
     // Update is called once per frame
@@ -20,16 +22,20 @@ public class pickandThrow : MonoBehaviour
     {
         if(isPicked)
         {
-            pickObject();
-            //gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            gameObject.transform.SetParent(parentTemp.transform);
-            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            //Debug.Log("Object touching");
+            if (Input.GetKeyDown(KeyCode.LeftShift) && buttonCheck == false)
             {
+                Debug.Log("Picking");
+                pickObject();
+                buttonCheck = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && buttonCheck == true)
+            {
+                Debug.Log("Throwing");
                 throwObject();
+                buttonCheck = false;
                 //Throw
+
             }
         }
         else
@@ -57,18 +63,27 @@ public class pickandThrow : MonoBehaviour
     void pickObject()
     {
         Debug.Log("Object picked");
-        //gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().detectCollisions = true;
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        gameObject.transform.SetParent(parentTemp.transform);
+        //gameObject.GetComponent<Rigidbody>().useGravity = false;
+        
     }
 
     void throwObject()
     {
         Debug.Log("Object thrown... please");
-        gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         throwForce = parentTemp.GetComponent<Rigidbody>().velocity;
         gameObject.transform.SetParent(null);
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody>().AddForce(throwForce, ForceMode.Impulse);
+        gameObject.GetComponent<CapsuleCollider>().enabled = true;
         isPicked = false;
     }
 }
