@@ -5,13 +5,23 @@ using UnityEngine;
 public class TentacleSelector : MonoBehaviour
 {
     public TentacleNavigation[] tentacleNavigations;
+    public Material defaultMaterial;
+    public Material selectedMaterial;
     int input;
+    MeshRenderer[] meshRenderers;
     // Start is called before the first frame update
     void Start()
     {
-        foreach(TentacleNavigation tenNav in tentacleNavigations)
+        meshRenderers = new MeshRenderer[tentacleNavigations.Length];
+        for (int i = 0; i < tentacleNavigations.Length; ++i)
         {
-            tenNav.enabled = false;
+            tentacleNavigations[i].enabled = false;
+            MeshRenderer rend = tentacleNavigations[i].Tip.GetComponent<MeshRenderer>();
+            if (rend)
+            {
+                rend.material = defaultMaterial;
+            }
+            meshRenderers[i] = rend;
         }
     }
 
@@ -41,13 +51,22 @@ public class TentacleSelector : MonoBehaviour
         }
         if (input > 0)
         {
-            foreach (TentacleNavigation tenNav in tentacleNavigations)
+            for (int i = 0; i < tentacleNavigations.Length; ++i)
             {
-                tenNav.enabled = false;
+                tentacleNavigations[i].enabled = false;
+                if (meshRenderers[i])
+                {
+                    meshRenderers[i].material = defaultMaterial;
+                }
             }
             if (input <= tentacleNavigations.Length)
             {
-                tentacleNavigations[input - 1].enabled = true;
+                int index = input - 1;
+                tentacleNavigations[index].enabled = true;
+                if (meshRenderers[index])
+                {
+                    meshRenderers[index].material = selectedMaterial;
+                }
             }
         }
     }
