@@ -66,7 +66,7 @@ public class TentacleNavigation : MonoBehaviour
 
     void MoveTentacle(Vector3 direction, Vector3 torque)
     {
-        Debug.Log("Rising");
+        //Debug.Log("Rising");
         //kinematicOption.isKinematic = true;
         //connectedbodykinematicOption.isKinematic = true;
         //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
