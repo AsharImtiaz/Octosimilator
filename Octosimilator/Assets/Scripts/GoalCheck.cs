@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoalCheck : MonoBehaviour
 {
-    public Text goalUI;
+    public Text goalUI;             // reference to the GUIText for displaying the goal message
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +18,10 @@ public class GoalCheck : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)             
     {
-        if(other.gameObject.tag == "Grab")
+        // if the object entering the collider has the tag 'Grab', enable the GUIText with goal message and play the sound
+        if (other.gameObject.tag == "Grab")              
         {
             Debug.Log("Goal Scored!!");
             goalUI.GetComponent<Text>().enabled = true;

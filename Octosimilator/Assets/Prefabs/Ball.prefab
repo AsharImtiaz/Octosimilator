@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 471334039843665240}
   - component: {fileID: 471334039843665241}
   - component: {fileID: 970753147}
-  - component: {fileID: 8805963645215167707}
+  - component: {fileID: 650830218457625273}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Grab
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8805963645215167707
+--- !u!114 &650830218457625273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PickAndThrow : MonoBehaviour
+public class pickandThrow : MonoBehaviour
 {
     // Start is called before the first frame update
     bool isPicked;
-    GameObject parentTemp;
+    GameObject parentTemp;          
     Vector3 objPosition;
     Vector3 throwForce;
     bool buttonCheck;
-
-    bool isChecked;
 
     Rigidbody rigidb;
     Collider[] colliders;

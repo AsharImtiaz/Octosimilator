@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class tipClamp : MonoBehaviour
 {
-    public static int selectedArm;
-    GameObject grabThing;
+    public static int selectedArm;          //variable to keep in check which arm is curretly selected
     // Start is called before the first frame update
     void Start()
     {
@@ -15,39 +14,30 @@ public class tipClamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl))
+        if(Input.GetKeyDown(KeyCode.LeftControl))           // with the press of left ctrl unclamp tip of tentacle from wall
         {
             Debug.Log("Unclamped!");
-            unclampArm();
-        }
-        if(Input.GetKeyDown(KeyCode.LeftAlt) && grabThing != null)
-        {
-            //releaseObject();
+            unclampArm();           
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Climb")
+        if(collision.gameObject.tag == "Climb")         // if collision with the object has tag 'Climb' latch on automatically
         {
             clampArm();
             Debug.Log("Grabhold reached");
         }
-        /*if(collision.gameObject.tag == "Grab")
-        {
-            grabThing = collision.gameObject;
-            //grabObject(grabThing);            
-        }*/
     }
 
-    void clampArm()
+    void clampArm()         // function to clamp the tip of the tentacle to the point where it collided with the wall
     {
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    void unclampArm()
+    void unclampArm()           // unclamp or release the arm that is currently selected from the wall 
     {
         if (selectedArm == 1)
         {
@@ -73,21 +63,5 @@ public class tipClamp : MonoBehaviour
             GameObject.Find("Tip (4)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             GameObject.Find("Tip (4)").GetComponent<Rigidbody>().isKinematic = false;
         }
-    }
-
-    void grabObject(GameObject grab)
-    {
-        Debug.Log("Grabbable reached");
-        grab.GetComponent<CapsuleCollider>().enabled = false;
-        grab.GetComponent<Rigidbody>().isKinematic = true;
-        grab.transform.parent = gameObject.transform;
-    }
-
-    void releaseObject()
-    {
-        Debug.Log("Released!" + grabThing);
-        grabThing.transform.parent = null;
-        grabThing.GetComponent<CapsuleCollider>().enabled = true;
-        grabThing.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
