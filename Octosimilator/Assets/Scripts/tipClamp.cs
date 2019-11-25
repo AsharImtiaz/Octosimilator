@@ -15,7 +15,6 @@ public class tipClamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(selectedArm);
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             Debug.Log("Unclamped!");
