@@ -12,6 +12,8 @@ public class PickAndThrow : MonoBehaviour
     Vector3 throwForce;
     bool buttonCheck;
 
+    bool isChecked;
+
     Rigidbody rigidb;
     Collider[] colliders;
 

@@ -23,7 +23,7 @@ public class GoalCheck : MonoBehaviour
         if(other.gameObject.tag == "Grab")
         {
             Debug.Log("Goal Scored!!");
-            goalUI.enabled = true;
+            goalUI.GetComponent<Text>().enabled = true;
             goalUI.GetComponent<AudioSource>().Play();
         }
     }
