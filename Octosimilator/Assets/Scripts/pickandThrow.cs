@@ -17,6 +17,8 @@ public class PickAndThrow : MonoBehaviour
 
     public UnityEvent onPickUp;
     public UnityEvent onThrow;
+
+    GameObject octoHead;
     void Start()
     {
         isPicked = false;
@@ -25,6 +27,8 @@ public class PickAndThrow : MonoBehaviour
 
         rigidb = GetComponent<Rigidbody>();
         colliders = GetComponentsInChildren<Collider>();
+
+        octoHead = GameObject.Find("OctoBodyRestructured");
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class PickAndThrow : MonoBehaviour
             {
                 Debug.Log("Throwing");
                 throwObject();
+                octoHead.GetComponent<AudioSource>().Play();
                 buttonCheck = false;
                 //Throw
 
