@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PickAndThrow : MonoBehaviour
+public class pickandThrow : MonoBehaviour
 {
     // Start is called before the first frame update
     bool isPicked;
