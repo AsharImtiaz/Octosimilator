@@ -4763,6 +4763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3464379102026551922}
   - component: {fileID: 2643721945889180977}
+  - component: {fileID: 30886924469150728}
   - component: {fileID: 1933245899}
   m_Layer: 0
   m_Name: Rocket
@@ -4798,6 +4799,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6c8909d8c9943a4aa47dc126b7ea1a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 30886924469150728}
+        m_MethodName: LaunchRocket
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onThrow:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &30886924469150728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464379102026551923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dfd81a01f6173429122d2f981b8288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &1933245899
