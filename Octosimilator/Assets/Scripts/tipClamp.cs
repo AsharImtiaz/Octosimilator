@@ -34,11 +34,11 @@ public class tipClamp : MonoBehaviour
             clampArm();
             Debug.Log("Grabhold reached");
         }
-        if(collision.gameObject.tag == "Grab")
+        /*if(collision.gameObject.tag == "Grab")
         {
             grabThing = collision.gameObject;
             //grabObject(grabThing);            
-        }
+        }*/
     }
 
     void clampArm()

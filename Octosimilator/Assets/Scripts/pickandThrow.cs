@@ -64,7 +64,7 @@ public class pickandThrow : MonoBehaviour
     {
         Debug.Log("Object picked");
         gameObject.GetComponent<Rigidbody>().detectCollisions = true;
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
@@ -83,7 +83,7 @@ public class pickandThrow : MonoBehaviour
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody>().AddForce(throwForce, ForceMode.Impulse);
-        gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
         isPicked = false;
     }
 }

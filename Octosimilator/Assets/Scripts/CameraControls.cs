@@ -6,7 +6,7 @@ public class CameraControls : MonoBehaviour
 {
     public GameObject toFollow;
     public float zOffset = -15.7f;
-    public float yOffset = 12.2f;
+    public float yOffset = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
