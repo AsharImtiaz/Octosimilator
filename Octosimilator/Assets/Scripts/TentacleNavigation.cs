@@ -64,11 +64,6 @@ public class TentacleNavigation : MonoBehaviour
             direction += cameraDirection.normalized;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rbTip.isKinematic = !rbTip.isKinematic;
-        }
-
         MoveTentacle(direction);
     }
 
