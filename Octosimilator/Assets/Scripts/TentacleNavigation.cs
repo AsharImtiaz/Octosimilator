@@ -4,41 +4,34 @@ using UnityEngine;
 
 public class TentacleNavigation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //AudioSource musicSource;
     Rigidbody rbTip;
     Rigidbody[] rbsArm;
-    //Transform parent;
     public GameObject Tip;
     public GameObject Arm;
-    //Rigidbody connectedbodykinematicOption;
-    //public GameObject connectedBody;
     public float ForceStrength = 20.0f;
-    //public float TorqueStrength = 20.0f;
+
     void Start()
     {
-        //parent = transform.parent;
         rbTip = Tip.GetComponent<Rigidbody>();
         rbsArm = Arm.GetComponentsInChildren<Rigidbody>();
-        //connectedbodykinematicOption = connectedBody.GetComponent<Rigidbody>();
-        //musicSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Get inputs to calculate force direction
         Vector3 direction = new Vector3();
-        //Vector3 torque = new Vector3();
+
+        // Up and down relative to world space
         if(Input.GetKey(KeyCode.Q))
         {
             direction += Vector3.up;
-            //torque += transform.TransformDirection(Vector3.left).normalized;
         }
         if (Input.GetKey(KeyCode.E))
         {
             direction += Vector3.down;
-            //torque += transform.TransformDirection(Vector3.right).normalized;
         }
+        // horizontal movement relative to camera space
         if (Input.GetKey(KeyCode.W))
         {
             Vector3 cameraDirection = Camera.main.transform.forward;
@@ -64,27 +57,18 @@ public class TentacleNavigation : MonoBehaviour
             direction += cameraDirection.normalized;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rbTip.isKinematic = !rbTip.isKinematic;
-        }
-
         MoveTentacle(direction);
     }
 
     void MoveTentacle(Vector3 direction)
     {
-        //Debug.Log("Rising");
-        //kinematicOption.isKinematic = true;
-        //connectedbodykinematicOption.isKinematic = true;
-        //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
+        // Apply force to tentacle tip
         rbTip.AddForce(direction.normalized * ForceStrength, ForceMode.Force);
-        //rbTip.AddTorque(torque.normalized * TorqueStrength, ForceMode.Force);
+        // Apply force (in fractions) to tentacle segments
         foreach (Rigidbody rb in rbsArm)
         {
             float factor = Vector3.Distance(transform.position, rb.transform.position) / Vector3.Distance(transform.position, rbTip.transform.position);
             rb.AddForce(direction.normalized * ForceStrength * factor, ForceMode.Force);
-            //rb.AddTorque(torque.normalized * TorqueStrength, ForceMode.Force);
         }
     }
 }

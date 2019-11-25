@@ -78,6 +78,8 @@ public class pickandThrow : MonoBehaviour
     void pickObject()
     {
         Debug.Log("Object picked");
+        gameObject.transform.SetParent(parentTemp.transform, true);
+
         rigidb.detectCollisions = true;
         foreach (Collider col in colliders)
         {
@@ -85,9 +87,9 @@ public class pickandThrow : MonoBehaviour
         }
         //gameObject.GetComponent<CapsuleCollider>().enabled = false;
         rigidb.isKinematic = true;
+        rigidb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
         rigidb.velocity = Vector3.zero;
         rigidb.angularVelocity = Vector3.zero;
-        gameObject.transform.SetParent(parentTemp.transform, true);
         //gameObject.GetComponent<Rigidbody>().useGravity = false;
         
         if (onPickUp != null)
@@ -99,8 +101,9 @@ public class pickandThrow : MonoBehaviour
     void throwObject()
     {
         Debug.Log("Object thrown... please");
-        
+
         rigidb.isKinematic = false;
+        rigidb.constraints = RigidbodyConstraints.None;
         throwForce = parentTemp.GetComponent<Rigidbody>().velocity;
         gameObject.transform.SetParent(null, true);
         rigidb.velocity = Vector3.zero;

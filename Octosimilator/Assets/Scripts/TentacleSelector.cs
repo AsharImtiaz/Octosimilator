@@ -16,7 +16,7 @@ public class TentacleSelector : MonoBehaviour
         for (int i = 0; i < tentacleNavigations.Length; ++i)
         {
             tentacleNavigations[i].enabled = false;
-            MeshRenderer rend = tentacleNavigations[i].Tip.GetComponent<MeshRenderer>();
+            MeshRenderer rend = tentacleNavigations[i].Tip.GetComponentInChildren<MeshRenderer>();
             if (rend)
             {
                 rend.material = defaultMaterial;
@@ -28,6 +28,7 @@ public class TentacleSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Get input 1 to 4
         input = -1;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -51,6 +52,7 @@ public class TentacleSelector : MonoBehaviour
         }
         if (input > 0)
         {
+            // Reset all materials to default and set tentacles inactive
             for (int i = 0; i < tentacleNavigations.Length; ++i)
             {
                 tentacleNavigations[i].enabled = false;
@@ -59,6 +61,7 @@ public class TentacleSelector : MonoBehaviour
                     meshRenderers[i].material = defaultMaterial;
                 }
             }
+            // Set selected tentacle to be active and change material to highlight
             if (input <= tentacleNavigations.Length)
             {
                 int index = input - 1;

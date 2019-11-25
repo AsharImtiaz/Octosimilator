@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 80
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3499,15 +3499,15 @@ ParticleSystem:
         key0: {r: 0.2924528, g: 0.031728376, b: 0.031728376, a: 0}
         key1: {r: 0.9811321, g: 0.7359856, b: 0.013883919, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 1, g: 1, b: 1, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 10216
-        ctime1: 22359
-        ctime2: 52814
-        ctime3: 0
+        ctime1: 26407
+        ctime2: 65535
+        ctime3: 65535
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -4798,7 +4798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3464379102026551923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c8909d8c9943a4aa47dc126b7ea1a4, type: 3}
+  m_Script: {fileID: 11500000, guid: da12cac0bf7d6164cb72f827bef0150e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onPickUp:
@@ -4817,7 +4817,18 @@ MonoBehaviour:
         m_CallState: 2
   onThrow:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 30886924469150728}
+        m_MethodName: ThrowRocket
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &30886924469150728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4830,6 +4841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3dfd81a01f6173429122d2f981b8288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 3464379101726775569}
+  flightTime: 30
+  forceMagnitude: 360
 --- !u!54 &1933245899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4904,7 +4918,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2bc64428ea89c064091cb941c4e5de57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4997,7 +5011,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2bc64428ea89c064091cb941c4e5de57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -16,6 +16,7 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Poll Inputs to rotate camera
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.RotateAround(toFollow.transform.position, Vector3.up, 30.0f * Time.deltaTime);
@@ -32,10 +33,12 @@ public class CameraControls : MonoBehaviour
         {
             transform.RotateAround(toFollow.transform.position, transform.right, -30.0f * Time.deltaTime);
         }
+        //Calculate offset vector from new rotation
         Vector3 offset = transform.forward;
         offset.y = 0.0f;
         offset = offset.normalized * zOffset;
         offset.y = yOffset;
+        //Lerp position for smooth movement
         transform.position = Vector3.Lerp(transform.position, toFollow.transform.position + offset, Time.deltaTime);
         transform.LookAt(toFollow.transform);
     }
