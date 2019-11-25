@@ -16,7 +16,7 @@ public class TentacleSelector : MonoBehaviour
         for (int i = 0; i < tentacleNavigations.Length; ++i)
         {
             tentacleNavigations[i].enabled = false;
-            MeshRenderer rend = tentacleNavigations[i].Tip.GetComponent<MeshRenderer>();
+            MeshRenderer rend = tentacleNavigations[i].Tip.GetComponentInChildren<MeshRenderer>();
             if (rend)
             {
                 rend.material = defaultMaterial;
