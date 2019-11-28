@@ -391,6 +391,16 @@ PrefabInstance:
       propertyPath: liftSound
       value: 
       objectReference: {fileID: 8300000, guid: c993bb58ceda1a04d8ea25b0553c507d, type: 3}
+    - target: {fileID: 3112972416900937423, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112972416900937423, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3385040307104726080, guid: c4c91528db8f15b4081f434e52be7c49,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -410,6 +420,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_EnableCollision
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763879850001229014, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763879850001229014, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 711666566995214769, guid: c4c91528db8f15b4081f434e52be7c49,
         type: 3}
@@ -431,6 +451,16 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 540938317967350906, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 540938317967350906, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8479661286485481616, guid: c4c91528db8f15b4081f434e52be7c49,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -450,6 +480,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_EnableCollision
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091906558013212677, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091906558013212677, guid: c4c91528db8f15b4081f434e52be7c49,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2110570646262929009, guid: c4c91528db8f15b4081f434e52be7c49,
         type: 3}
