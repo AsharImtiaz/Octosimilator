@@ -87,7 +87,7 @@ public class pickandThrow : MonoBehaviour
         }
         //gameObject.GetComponent<CapsuleCollider>().enabled = false;
         rigidb.isKinematic = true;
-        rigidb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+        //rigidb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
         rigidb.velocity = Vector3.zero;
         rigidb.angularVelocity = Vector3.zero;
         //gameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -104,7 +104,7 @@ public class pickandThrow : MonoBehaviour
 
         gameObject.transform.SetParent(null, true);
         rigidb.isKinematic = false;
-        rigidb.constraints = RigidbodyConstraints.None;
+        //rigidb.constraints = RigidbodyConstraints.None;
         throwForce = parentTemp.GetComponent<Rigidbody>().velocity;
         rigidb.velocity = Vector3.zero;
         rigidb.angularVelocity = Vector3.zero;
