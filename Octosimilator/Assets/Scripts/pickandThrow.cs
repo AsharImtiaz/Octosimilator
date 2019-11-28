@@ -102,10 +102,10 @@ public class pickandThrow : MonoBehaviour
     {
         Debug.Log("Object thrown... please");
 
+        gameObject.transform.SetParent(null, true);
         rigidb.isKinematic = false;
         rigidb.constraints = RigidbodyConstraints.None;
         throwForce = parentTemp.GetComponent<Rigidbody>().velocity;
-        gameObject.transform.SetParent(null, true);
         rigidb.velocity = Vector3.zero;
         rigidb.angularVelocity = Vector3.zero;
         rigidb.AddForce(throwForce, ForceMode.Impulse);

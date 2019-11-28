@@ -24,7 +24,7 @@ public class navigationTip : MonoBehaviour
             raiseTentacle();
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                musicSource.Play();
+                //musicSource.Play();
             }
             
        }

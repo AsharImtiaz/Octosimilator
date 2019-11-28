@@ -9,11 +9,14 @@ public class TentacleNavigation : MonoBehaviour
     public GameObject Tip;
     public GameObject Arm;
     public float ForceStrength = 20.0f;
+    public AudioClip liftSound;
+    AudioSource octoSource;
 
     void Start()
     {
         rbTip = Tip.GetComponent<Rigidbody>();
         rbsArm = Arm.GetComponentsInChildren<Rigidbody>();
+        octoSource = GameObject.Find("Octopus").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class TentacleNavigation : MonoBehaviour
         if(Input.GetKey(KeyCode.Q))
         {
             direction += Vector3.up;
+            octoSource.Play();
         }
         if (Input.GetKey(KeyCode.E))
         {

@@ -42,26 +42,26 @@ public class tipClamp : MonoBehaviour
         if (selectedArm == 1)
         {
             //Debug.Log("In Arm 1");
-            GameObject.Find("Tip (1)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GameObject.Find("Tip (1)").GetComponent<Rigidbody>().isKinematic = false;
+            GameObject.Find("Tip Container (1)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Tip Container (1)").GetComponent<Rigidbody>().isKinematic = false;
         }
         if (selectedArm == 2)
         {
             //Debug.Log("In Arm 2");
-            GameObject.Find("Tip (2)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GameObject.Find("Tip (2)").GetComponent<Rigidbody>().isKinematic = false;
+            GameObject.Find("Tip Container (2)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Tip Container (2)").GetComponent<Rigidbody>().isKinematic = false;
         }
         if (selectedArm == 3)
         {
             //Debug.Log("In Arm 3");
-            GameObject.Find("Tip (3)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GameObject.Find("Tip (3)").GetComponent<Rigidbody>().isKinematic = false;
+            GameObject.Find("Tip Container (3)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Tip Container (3)").GetComponent<Rigidbody>().isKinematic = false;
         }
         if (selectedArm == 4)
         {
             //Debug.Log("In Arm 4");
-            GameObject.Find("Tip (4)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GameObject.Find("Tip (4)").GetComponent<Rigidbody>().isKinematic = false;
+            GameObject.Find("Tip Container (4)").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Tip Container (4)").GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
