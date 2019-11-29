@@ -41,8 +41,12 @@ public class BreakStuff : MonoBehaviour
         }
         else
         {
-            explosionForce = other.gameObject.GetComponent<Rigidbody>().velocity;
-            explode();
+            Rigidbody otherRb = other.gameObject.GetComponentInParent<Rigidbody>();
+            if (otherRb)
+            {
+                explosionForce = otherRb.velocity;
+                explode();
+            }
         }
 
     }

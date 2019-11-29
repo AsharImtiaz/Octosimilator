@@ -20,7 +20,7 @@ public class TentacleNavigation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Get inputs to calculate force direction
         Vector3 direction = new Vector3();
