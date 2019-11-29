@@ -9,7 +9,7 @@ public class RocketBehaviour : MonoBehaviour
     public float forceMagnitude = 20.0f;
 
     private Rigidbody rigidb;
-    private Rigidbody parentrb;
+    private Rigidbody parentRb;
     private bool isFlying;
 
     private void Start()
@@ -17,7 +17,7 @@ public class RocketBehaviour : MonoBehaviour
         rigidb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Make Rocket always face upwards
         transform.eulerAngles = Vector3.zero;
@@ -26,7 +26,7 @@ public class RocketBehaviour : MonoBehaviour
     public void LaunchRocket()
     {
         // Get rigidbody in parent
-        parentrb = transform.parent.GetComponent<Rigidbody>();
+        parentRb = transform.parent.GetComponent<Rigidbody>();
         if (isFlying)
         {
             return;
@@ -47,10 +47,10 @@ public class RocketBehaviour : MonoBehaviour
         while (elapsedTime < flightTime)
         {
             // Apply force to parent while attached to e.g. tentacle
-            activeBody = parentrb ? parentrb : rigidb;
+            activeBody = parentRb ? parentRb : rigidb;
             activeBody.AddForce(transform.up * forceMagnitude, ForceMode.Acceleration);
-            yield return new WaitForEndOfFrame();
-            elapsedTime += Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+            elapsedTime += Time.fixedDeltaTime;
         }
         particles.Stop();
         isFlying = false;
@@ -59,6 +59,6 @@ public class RocketBehaviour : MonoBehaviour
     public void ThrowRocket()
     {
         // Set paretn rigidbody to null when let go
-        parentrb = null;
+        parentRb = null;
     }
 }
