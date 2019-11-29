@@ -29,7 +29,7 @@ public class TentacleNavigation : MonoBehaviour
         if(Input.GetKey(KeyCode.Q))
         {
             direction += Vector3.up;
-            octoSource.Play();
+            //octoSource.Play();
         }
         if (Input.GetKey(KeyCode.E))
         {

@@ -35,13 +35,13 @@ public class BreakStuff : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Floor")
+        if (other.gameObject.name == "Terrain_0_0_0adfe4d0-514b-47c6-bb1a-5059fce8267a")
         {
             
         }
         else
         {
-            explosionForce = other.gameObject.GetComponent<Rigidbody>().velocity / 2;
+            explosionForce = other.gameObject.GetComponent<Rigidbody>().velocity;
             explode();
         }
 
