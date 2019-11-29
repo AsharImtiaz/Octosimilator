@@ -35,7 +35,7 @@ public class TentacleNavigation : MonoBehaviour
         {
             direction += Vector3.down;
         }
-        // horizontal movement relative to camera space
+        // Horizontal movement relative to camera space
         if (Input.GetKey(KeyCode.W))
         {
             Vector3 cameraDirection = Camera.main.transform.forward;
